@@ -1,10 +1,8 @@
 //  Created by Pradeep Singh on 06/08/2020.
 //  Copyright © 2020 Pradeep Singh. All rights reserved.
 
-/*
-Given a set of positive numbers, find if we can partition it into two subsets such
-that the sum of elements in both subsets is equal.
-*/
+
+// Given a set of positive numbers, find the total number of subsets whose sum is equal to a given number ‘S’.
 
 
 #include<bits/stdc++.h>
@@ -18,11 +16,11 @@ int CountOfSubsetSum(vector<int>&v, int currsum, int requiredsum, int currindex,
 	}
 	if (currsum > requiredsum || currindex >= v.size())
 		return 0;
-
+	if (dp[currindex][currsum] != -1) return dp[currindex][currsum];
 	int count = 0;
 	count += CountOfSubsetSum(v, currsum + v[currindex], requiredsum, currindex + 1, dp);
 	count += CountOfSubsetSum(v, currsum , requiredsum, currindex + 1, dp);
-	return count;
+	return dp[currindex][currsum] = count;
 }
 
 

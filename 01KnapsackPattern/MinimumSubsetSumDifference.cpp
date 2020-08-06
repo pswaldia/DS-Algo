@@ -1,11 +1,9 @@
 //  Created by Pradeep Singh on 06/08/2020.
 //  Copyright © 2020 Pradeep Singh. All rights reserved.
 
-/*
-Given the weights and profits of ‘N’ items, we are asked to put these items in a knapsack which has a capacity ‘C’.
-The goal is to get the maximum profit out of the items in the knapsack. Each item can only be selected once,
-as we don’t have multiple quantities of any item.
-*/
+
+// Given a set of positive numbers, partition the set into two subsets with minimum difference between their subset sums.
+
 
 
 
